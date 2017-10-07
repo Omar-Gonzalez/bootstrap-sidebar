@@ -59,6 +59,7 @@ body,html{
 
     @media (max-width: $break-mobile){
         width:$sidebar-mobile-width;
+        box-shadow: 1px 0px 2px 0px rgba(18,18,18,1);
         hr{
             display: block;
             color:$sidebar-icon-color;

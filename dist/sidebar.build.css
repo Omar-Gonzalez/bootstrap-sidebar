@@ -65,6 +65,8 @@ body, html {
 @media (max-width: 768px) {
   #sidebar {
     width: 44px;
+    -webkit-box-shadow: 1px 0px 2px 0px #121212;
+    box-shadow: 1px 0px 2px 0px #121212;
   }
   #sidebar hr {
     display: block;
