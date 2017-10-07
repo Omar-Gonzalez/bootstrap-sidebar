@@ -5,43 +5,73 @@ body, html {
 
 .content {
   outline: 1px solid #03A9F4;
-  margin-left: 10em;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 44px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    margin-left: 240px;
+  }
 }
 
 [class*="col-"] {
   outline: 1px solid #03A9F4;
 }
 
-.sidebar {
+#sidebar {
   position: fixed;
   height: 100%;
-  -webkit-transition: width 0.35s;
-  -o-transition: width 0.35s;
-  transition: width 0.35s;
-  background-color: #303F9F;
+  background-color: #283593;
+  z-index: 10;
 }
 
-@media (max-width: 320px) {
-  .sidebar {
-    width: 2em;
-  }
+#sidebar hr {
+  display: none;
+  color: white;
 }
 
 @media (max-width: 768px) {
-  .sidebar {
-    width: 3em;
+  #sidebar {
+    width: 44px;
+  }
+  #sidebar hr {
+    display: block;
+  }
+  #sidebar .sidebar-nav {
+    background-color: #3F51B5;
+    min-height: 44px;
+  }
+  #sidebar #toggle-menu {
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 22px;
+    display: block;
+  }
+  #sidebar #close-menu {
+    color: white;
+    font-size: 22px;
+    float: right;
+    margin-top: -20px;
+    margin-right: 12px;
+    display: none;
   }
 }
 
-@media (max-width: 1200px) and (min-width: 768px) {
-  .sidebar {
-    width: 6em;
+@media (min-width: 768px) {
+  #sidebar {
+    width: 240px;
   }
-}
-
-@media (min-width: 1200px) {
-  .sidebar {
-    width: 8em;
+  #sidebar #toggle-menu {
+    display: none;
+  }
+  #sidebar #close-menu {
+    display: none;
   }
 }
 

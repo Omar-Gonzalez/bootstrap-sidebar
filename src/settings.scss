@@ -1,34 +1,16 @@
+//Debug Settings
 $debug:true;
+$debug-grid-color:#03A9F4;
 
-$color-grid-col:#03A9F4;
-$color-grid-sidebar:#673AB7;
-$color-grid-container:#E91E63;
+//Theme Colors
+$sidebar-bg-color:#283593;
+$sidebar-nav-bg-color:#3F51B5;
+$sidebar-icon-color:white;
+$sidebar-a-color:white;
 
-$color-theme-blue:#303F9F;
-$color-theme-lightgrey:#F2F6F8;
-$color-theme-darkblue:#21314E;
-$color-theme-a:#F5F5F5;
-$color-theme-brand:#FAFAFA;
-$color-theme-a-hover:#D1C4E9;
-
-$right-shadow:-1px 1px 2px 0px rgba(92,92,92,1);
-$left-shadow:1px 1px 2px 0px rgba(92,92,92,1);
-
-
-//Grid Break Points
-$break-small: 320px;
-$break-medium: 768px;
-$break-large: 1200px;
-$break-x-large: 1800px;
+//Sidebar Break Points
+$break-mobile: 768px;
 
 //Sidebar Width 
-$sidebar-width-small:2em;
-$sidebar-width-medium:3em;
-$sidebar-width-large:6em;
-$sidebar-width-x-large:8em;
-
-//Toggle Width 
-$sidebar-toggle-width:12em;
-
-//Transition time
-$transition-time:0.35s; //iOS Standard
+$sidebar-mobile-width:44px;
+$sidebar-desktop-width:240px;

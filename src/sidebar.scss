@@ -7,34 +7,67 @@ body,html{
 
 .content{
     @if $debug {
-        outline:1px solid $color-grid-col;
+        outline:1px solid $debug-grid-color;
     }
-    margin-left: 10em;
+    @media (max-width: $break-mobile){
+        margin-left:$sidebar-mobile-width;
+    }
+
+    @media (min-width: $break-mobile){
+        margin-left:$sidebar-desktop-width;
+    }
 }
 
 [class*="col-"]{
     @if $debug {
-        outline:1px solid $color-grid-col;
+        outline:1px solid $debug-grid-color;
     }
 }
 
-.sidebar{
+#sidebar{
     position: fixed;
     height: 100%;
-    -webkit-transition: width $transition-time; 
-    transition: width $transition-time;
-    background-color: $color-theme-blue;
+    background-color: $sidebar-bg-color;
+    z-index: 10;
 
-    @media (max-width: $break-small) {
-        width: $sidebar-width-small;
+    hr{
+        display: none;
+        color:$sidebar-icon-color;
     }
-    @media (max-width: $break-medium) {
-        width: $sidebar-width-medium;
+
+    @media (max-width: $break-mobile){
+        width:$sidebar-mobile-width;
+        hr{
+            display: block;
+        }
+        .sidebar-nav{
+            background-color: $sidebar-nav-bg-color; 
+            min-height: $sidebar-mobile-width;
+        }
+        #toggle-menu{
+            color:$sidebar-icon-color;
+            padding-left: 10px;
+            padding-top: 10px;
+            font-size: 22px;
+            display:block;
+        }
+        #close-menu{
+            color:$sidebar-icon-color;
+            font-size: 22px;
+            float: right;
+            margin-top: -20px;
+            margin-right: 12px;
+            display: none;
+        }
     }
-    @media (max-width: $break-large) and (min-width: $break-medium) {
-        width: $sidebar-width-large;
-    }
-    @media (min-width: $break-large) {
-        width: $sidebar-width-x-large;
+
+    @media (min-width: $break-mobile){
+        width:$sidebar-desktop-width;
+        #toggle-menu{
+            display: none;
+        }
+        #close-menu{
+            display: none;
+        }
     }
 }
