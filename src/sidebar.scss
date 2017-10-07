@@ -30,15 +30,38 @@ body,html{
     background-color: $sidebar-bg-color;
     z-index: 10;
 
-    hr{
-        display: none;
-        color:$sidebar-icon-color;
+    .sidebar-content{
+        width: 100%;
+    }
+
+    ul{
+        color:$sidebar-ul-color;
+        padding-left: 0;
+        list-style-type: none;
+        li{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        p, a, h1, h2, h3, h4{
+            padding-left: 30px;
+        }
+        a{
+            color:$sidebar-a-color;
+            display: block;
+            &:hover{
+                background-color:$sidebar-nav-bg-color;
+            }
+        }
+    }
+    .sidebar-content{
+        display: block;
     }
 
     @media (max-width: $break-mobile){
         width:$sidebar-mobile-width;
         hr{
             display: block;
+            color:$sidebar-icon-color;
         }
         .sidebar-nav{
             background-color: $sidebar-nav-bg-color; 
@@ -59,6 +82,18 @@ body,html{
             margin-right: 12px;
             display: none;
         }
+        .sidebar-content{
+            display: none;
+        }
+        #toggle-menu{
+            display: block;
+        }
+        #close-menu{
+            display: none;
+        }
+        hr{
+            display: block;
+        }
     }
 
     @media (min-width: $break-mobile){
@@ -67,6 +102,9 @@ body,html{
             display: none;
         }
         #close-menu{
+            display: none;
+        }
+        hr{
             display: none;
         }
     }
