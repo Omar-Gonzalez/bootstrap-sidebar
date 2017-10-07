@@ -1,0 +1,2 @@
+body,html{margin:0px;padding:0px}.content{outline:1px solid #03A9F4;margin-left:10em}[class*=col-]{outline:1px solid #03A9F4}.sidebar{position:fixed;height:100%;transition:width 0.35s;background-color:#303F9F}@media (max-width:320px){.sidebar{width:2em}}@media (max-width:768px){.sidebar{width:3em}}@media (max-width:1200px) and (min-width:768px){.sidebar{width:6em}}@media (min-width:1200px){.sidebar{width:8em}}
+/*# sourceMappingURL=sidebar.min.css.map */

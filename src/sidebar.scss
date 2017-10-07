@@ -1,0 +1,40 @@
+@import "./settings";
+
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+
+.content{
+    @if $debug {
+        outline:1px solid $color-grid-col;
+    }
+    margin-left: 10em;
+}
+
+[class*="col-"]{
+    @if $debug {
+        outline:1px solid $color-grid-col;
+    }
+}
+
+.sidebar{
+    position: fixed;
+    height: 100%;
+    -webkit-transition: width $transition-time; 
+    transition: width $transition-time;
+    background-color: $color-theme-blue;
+
+    @media (max-width: $break-small) {
+        width: $sidebar-width-small;
+    }
+    @media (max-width: $break-medium) {
+        width: $sidebar-width-medium;
+    }
+    @media (max-width: $break-large) and (min-width: $break-medium) {
+        width: $sidebar-width-large;
+    }
+    @media (min-width: $break-large) {
+        width: $sidebar-width-x-large;
+    }
+}
