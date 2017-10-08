@@ -35,5 +35,25 @@
             }, 350);
         }
     });
-})()
-
+    var bpMobileEnable = true;
+    var bpDestkopEnable = true;
+    $(window).on('resize',function(){
+        if($(window).width() > mobileBreakPoint){
+            if(bpDestkopEnable){
+                bpDestkopEnable = false;
+                bpMobileEnable = true;
+                $('#sidebar').css('width','240px');
+                $('#close-menu').css('display','none');
+                $('.sidebar-content').css('display','block');
+            }
+        }else{
+            if(bpMobileEnable){
+                bpDestkopEnable = true;
+                bpMobileEnable = false;
+                $('#sidebar').css('width','44px');
+                $('#close-menu').css('display','none');
+                $('.sidebar-content').css('display','none');
+            }
+        }
+    });
+})();

@@ -52,6 +52,7 @@ body, html {
 #sidebar ul a {
   color: white;
   display: block;
+  text-decoration: none;
 }
 
 #sidebar ul a:hover {

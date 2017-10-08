@@ -48,6 +48,7 @@ body,html{
         a{
             color:$sidebar-a-color;
             display: block;
+            text-decoration: none;
             &:hover{
                 background-color:$sidebar-nav-bg-color;
             }
