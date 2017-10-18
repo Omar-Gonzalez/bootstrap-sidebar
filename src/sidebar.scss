@@ -69,14 +69,14 @@ body,html{
             background-color: $sidebar-nav-bg-color; 
             min-height: $sidebar-mobile-width;
         }
-        #toggle-menu{
+        .sb-toggle{
             color:$sidebar-icon-color;
             padding-left: 10px;
             padding-top: 10px;
             font-size: 22px;
             display:block;
         }
-        #close-menu{
+        .sb-close{
             color:$sidebar-icon-color;
             font-size: 22px;
             float: right;
@@ -87,10 +87,10 @@ body,html{
         .sidebar-content{
             display: none;
         }
-        #toggle-menu{
+        .sb-toggle{
             display: block;
         }
-        #close-menu{
+        .sb-close{
             display: none;
         }
         hr{
@@ -100,10 +100,10 @@ body,html{
 
     @media (min-width: $break-mobile){
         width:$sidebar-desktop-width;
-        #toggle-menu{
+        .sb-toggle{
             display: none;
         }
-        #close-menu{
+        .sb-close{
             display: none;
         }
         hr{

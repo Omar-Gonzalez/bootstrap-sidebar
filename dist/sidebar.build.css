@@ -77,14 +77,14 @@ body, html {
     background-color: #3F51B5;
     min-height: 44px;
   }
-  #sidebar #toggle-menu {
+  #sidebar .sb-toggle {
     color: white;
     padding-left: 10px;
     padding-top: 10px;
     font-size: 22px;
     display: block;
   }
-  #sidebar #close-menu {
+  #sidebar .sb-close {
     color: white;
     font-size: 22px;
     float: right;
@@ -95,10 +95,10 @@ body, html {
   #sidebar .sidebar-content {
     display: none;
   }
-  #sidebar #toggle-menu {
+  #sidebar .sb-toggle {
     display: block;
   }
-  #sidebar #close-menu {
+  #sidebar .sb-close {
     display: none;
   }
   #sidebar hr {
@@ -110,10 +110,10 @@ body, html {
   #sidebar {
     width: 240px;
   }
-  #sidebar #toggle-menu {
+  #sidebar .sb-toggle {
     display: none;
   }
-  #sidebar #close-menu {
+  #sidebar .sb-close {
     display: none;
   }
   #sidebar hr {
