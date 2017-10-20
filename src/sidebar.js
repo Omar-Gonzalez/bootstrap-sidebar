@@ -15,27 +15,12 @@ class SideBar {
     * - setDesktopMode() - set destkop mode if necesary
     */
     constructor(){
-        /**
-        * Define device kind
-        */
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            this.isMobile = true;
-        }else{
-            this.isMobile = false;
-        }
-        this.screenSizeEvent();
         //Props
         this.updating = false;
         this.state = "close";
         this.mobileBreakPoint = 768;
-    }
-
-    get deviceKind(){
-        if(this.isMobile){
-            return "Mobile Device";
-        }else{
-            return "Desktop";
-        }
+        //Init methods
+        this.screenSizeEvent();
     }
 
     update = () => {
@@ -85,5 +70,3 @@ class SideBar {
 }
 
 let sb = new SideBar();
-
-console.log(sb.deviceKind)
