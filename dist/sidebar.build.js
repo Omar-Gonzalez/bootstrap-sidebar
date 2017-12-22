@@ -44,8 +44,8 @@ var SideBar = function () {
                         width: '85%'
                     }, 350, function () {
                         //animation complete
-                        $('.sb-close').css('display', 'block');
-                        $('.sidebar-content').css('display', 'block');
+                        $('.sb-close').fadeIn("fast");
+                        $('.sidebar-content').fadeIn("fast");
                         _this.updating = false;
                         _this.state = "open";
                     });
@@ -54,7 +54,7 @@ var SideBar = function () {
                     //Close the SB
                     this.updating = true;
                     $('.sb-close').css('display', 'none');
-                    $('.sidebar-content').css('display', 'none');
+                    $('.sidebar-content').fadeOut("fast");
                     $('#sidebar').animate({
                         width: '44px'
                     }, 350, function () {
@@ -98,4 +98,10 @@ var SideBar = function () {
 }();
 
 var sb = new SideBar();
+
+$(document).ready(function () {
+    $('.sb-toggle, .sb-close').click(function () {
+        sb.update();
+    });
+});
 //# sourceMappingURL=sidebar.build.js.map

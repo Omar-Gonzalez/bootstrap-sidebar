@@ -31,8 +31,8 @@ class SideBar {
                     width: '85%'
                 }, 350, () => {
                     //animation complete
-                    $('.sb-close').css('display', 'block');
-                    $('.sidebar-content').css('display', 'block');
+                    $('.sb-close').fadeIn("fast");
+                    $('.sidebar-content').fadeIn("fast");
                     this.updating = false;
                     this.state = "open";
                 });
@@ -40,7 +40,7 @@ class SideBar {
             if (this.state === "open") { //Close the SB
                 this.updating = true;
                 $('.sb-close').css('display', 'none');
-                $('.sidebar-content').css('display', 'none');
+                $('.sidebar-content').fadeOut("fast");
                 $('#sidebar').animate({
                     width: '44px'
                 }, 350, () => {
@@ -77,3 +77,9 @@ class SideBar {
 }
 
 let sb = new SideBar();
+
+$(document).ready(function(){
+    $('.sb-toggle, .sb-close').click(function(){
+        sb.update();
+    });
+});
