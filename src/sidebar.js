@@ -5,7 +5,7 @@
 
 let UI = window.UI || {};
 
-UI.sidebar = class {
+UI.Sidebar = class {
     /**
      * SideBar Component - props:
      * - this.updating : weather the sidebar is updating state
@@ -76,9 +76,9 @@ UI.sidebar = class {
             $('.sidebar-content').css('display', 'none');
         }
     }
-}
+};
 
-UI.sb = new UI.SideBar();
+UI.sb = new UI.Sidebar();
 
 $(document).ready(function(){
     $('.sb-toggle, .sb-close').click(function(){

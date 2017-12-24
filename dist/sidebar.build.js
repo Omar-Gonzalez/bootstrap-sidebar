@@ -11,7 +11,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var UI = window.UI || {};
 
-UI.sidebar = function () {
+UI.Sidebar = function () {
     /**
      * SideBar Component - props:
      * - this.updating : weather the sidebar is updating state
@@ -99,7 +99,7 @@ UI.sidebar = function () {
     return _class;
 }();
 
-UI.sb = new UI.SideBar();
+UI.sb = new UI.Sidebar();
 
 $(document).ready(function () {
     $('.sb-toggle, .sb-close').click(function () {
