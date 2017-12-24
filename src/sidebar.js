@@ -3,7 +3,9 @@
  * ES6 Sidebar-Bootsrap Source 
  */
 
-class SideBar {
+let UI = window.UI || {};
+
+UI.sidebar = class {
     /**
      * SideBar Component - props:
      * - this.updating : weather the sidebar is updating state
@@ -76,10 +78,10 @@ class SideBar {
     }
 }
 
-let sb = new SideBar();
+UI.sb = new UI.SideBar();
 
 $(document).ready(function(){
     $('.sb-toggle, .sb-close').click(function(){
-        sb.update();
+        UI.sb.update();
     });
 });

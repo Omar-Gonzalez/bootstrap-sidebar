@@ -9,7 +9,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * ES6 Sidebar-Bootsrap Source 
  */
 
-var SideBar = function () {
+var UI = window.UI || {};
+
+UI.sidebar = function () {
     /**
      * SideBar Component - props:
      * - this.updating : weather the sidebar is updating state
@@ -20,8 +22,8 @@ var SideBar = function () {
      * - screenSizeEvent() - attach event listener screen width change
      * - setDesktopMode() - set destkop mode if necesary
      */
-    function SideBar() {
-        _classCallCheck(this, SideBar);
+    function _class() {
+        _classCallCheck(this, _class);
 
         //Props
         this.updating = false;
@@ -31,7 +33,7 @@ var SideBar = function () {
         this.screenSizeEvent();
     }
 
-    _createClass(SideBar, [{
+    _createClass(_class, [{
         key: "update",
         value: function update() {
             var _this = this;
@@ -94,14 +96,14 @@ var SideBar = function () {
         }
     }]);
 
-    return SideBar;
+    return _class;
 }();
 
-var sb = new SideBar();
+UI.sb = new UI.SideBar();
 
 $(document).ready(function () {
     $('.sb-toggle, .sb-close').click(function () {
-        sb.update();
+        UI.sb.update();
     });
 });
 //# sourceMappingURL=sidebar.build.js.map
