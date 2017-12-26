@@ -65,8 +65,6 @@ UI.Sidebar = function () {
                         _this.state = "close";
                     });
                 }
-            } else {
-                console.log("sb-updating");
             }
         }
     }, {
@@ -101,9 +99,73 @@ UI.Sidebar = function () {
 
 UI.sb = new UI.Sidebar();
 
+UI.AuthArea = function () {
+    /**
+     * Auth Area Component - props:
+     * - this.updating : weather the auth area is updating state
+     * - this.state : weather the auth area is open or close
+     * Auth Area - methods:
+     * - update() - close or open the side bar
+     */
+    function _class2() {
+        _classCallCheck(this, _class2);
+
+        //Props
+        this.updating = false;
+        this.state = "close";
+        this.mobileBreakPoint = 768;
+        //Init methods
+    }
+
+    _createClass(_class2, [{
+        key: "update",
+        value: function update() {
+            var _this3 = this;
+
+            if (!this.updating) {
+                if (this.state === 'close') {
+                    this.updating = true;
+                    $('.auth-close').fadeIn('fast');
+                    $('#auth-area').animate({
+                        height: window.innerHeight + 'px'
+                    }, 350, function () {
+                        _this3.updating = false;
+                        _this3.state = 'open';
+                        $('.auth-content').fadeIn('fast');
+                    });
+                }
+                if (this.state === 'open') {
+                    this.updating = true;
+                    $('.auth-content').fadeOut('fast');
+                    $('#auth-area').animate({
+                        height: '52px'
+                    }, 350, function () {
+                        _this3.updating = false;
+                        _this3.state = 'close';
+                        $('.auth-close').fadeOut('fast');
+                    });
+                }
+            }
+        }
+    }]);
+
+    return _class2;
+}();
+
+UI.authArea = new UI.AuthArea();
+
 $(document).ready(function () {
+    /**
+     * Update Sidebar 
+     */
     $('.sb-toggle, .sb-close').click(function () {
         UI.sb.update();
+    });
+    /**
+     * Update Auth Area
+     */
+    $('#auth-header').click(function () {
+        UI.authArea.update();
     });
 });
 //# sourceMappingURL=sidebar.build.js.map

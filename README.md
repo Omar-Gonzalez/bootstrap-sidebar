@@ -3,6 +3,7 @@
 
 * Couldn't find a sidebar theme for bootstrap that I like, so made this one 
 * Already tested and working in some of my freelance work
+* Includes displayable auth area
 * Minimal footprint
 * You can check the [live demo here! ](https://omar-gonzalez.github.io/bootstrap-sidebar/)
 

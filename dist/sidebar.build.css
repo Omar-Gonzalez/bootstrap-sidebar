@@ -3,10 +3,6 @@ body, html {
   padding: 0px;
 }
 
-.content {
-  outline: 1px solid #03A9F4;
-}
-
 @media (max-width: 768px) {
   .content {
     margin-left: 44px;
@@ -17,10 +13,6 @@ body, html {
   .content {
     margin-left: 240px;
   }
-}
-
-[class*="col-"] {
-  outline: 1px solid #03A9F4;
 }
 
 #sidebar {
@@ -118,6 +110,57 @@ body, html {
   }
   #sidebar hr {
     display: none;
+  }
+}
+
+#auth-area {
+  background-color: #E0E0E0;
+  width: 100%;
+  margin: 0px;
+}
+
+#auth-area .auth-content {
+  display: none;
+}
+
+#auth-area .auth-close {
+  float: right;
+  color: white;
+  font-size: 22px;
+  margin-top: -33px;
+  margin-right: 11px;
+  display: none;
+}
+
+#auth-area #auth-header {
+  background-color: #212121;
+  height: 52px;
+  cursor: pointer;
+}
+
+#auth-area #auth-header:hover .auth-legend {
+  color: #2196F3;
+}
+
+#auth-area #auth-header:hover .auth-close {
+  color: #2196F3;
+}
+
+@media (max-width: 768px) {
+  #auth-area .auth-legend {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 17px;
+    color: #2196F3;
+  }
+}
+
+@media (min-width: 768px) {
+  #auth-area .auth-legend {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 12px;
+    color: white;
   }
 }
 
